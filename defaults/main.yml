@@ -2,7 +2,7 @@
 # defaults vars file
 
 # initiator iqn
-open_iscsi_initiator_name: "iqn.2021-07.com.ricsanfre:{{ ansible_facts['nodename'] }}"
+open_iscsi_initiator_name: "iqn.2021-07.com.tsengel:{{ ansible_facts['nodename'] }}"
 
 open_iscsi_targets: []
 # open_iscsi_targets:

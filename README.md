@@ -20,18 +20,18 @@ To configure the iSCSI initiator, the following variables need to be configured:
 - iSCSI initiator iqn
 
 ```yml
-open_iscsi_initiator_name: "iqn.2021-07.com.ricsanfre:{{ ansible_facts['nodename'] }}"
+open_iscsi_initiator_name: "iqn.2021-07.com.tsengel:{{ ansible_facts['nodename'] }}"
 ```
 
 - Configuration of iSCSI daemon. Automatic login and authentication configuration
 
 ```yml
 # open-iscsi configuration
-open_iscsi_initiator_name: iqn.2021-07.com.ricsanfre:iscsi-initiator
+open_iscsi_initiator_name: iqn.2021-07.com.tsengel:iscsi-initiator
 open_iscsi_authentication: true
-open_iscsi_auth_username: iqn.2021-07.com.ricsanfre:iscsi-initiator
+open_iscsi_auth_username: iqn.2021-07.com.tsengel:iscsi-initiator
 open_iscsi_auth_password: s1cret0
-open_iscsi_auth_username_in: iqn.2021-07.com.ricsanfre:iscsi-target
+open_iscsi_auth_username_in: iqn.2021-07.com.tsengel:iscsi-target
 open_iscsi_auth_password_in: 0tr0s1cret0
 open_iscsi_automatic_startup: true
 ```
@@ -59,7 +59,7 @@ None.
 Example Playbook
 ----------------
 
-This example use `ricsanfre.storage` role for creating the logical volumes used to configure the iSCSI target.
+This example use `tsengel.storage` role for creating the logical volumes used to configure the iSCSI target.
 
 The example also shows how to use specific authentication method and credentials per target.
 
@@ -77,15 +77,15 @@ The example also shows how to use specific authentication method and credentials
         auto_portal_startup: true
         auto_node_startup: true
         portal: 192.168.0.11
-        target: iqn.2021-07.com.ricsanfre:iscsi-target
+        target: iqn.2021-07.com.tsengel:iscsi-target
         login: true
         node_auth: CHAP
-        node_user: iqn.2021-07.com.ricsanfre:iscsi-initiator
+        node_user: iqn.2021-07.com.tsengel:iscsi-initiator
         node_pass: s1cret0
-        node_user_in: iqn.2021-07.com.ricsanfre:iscsi-target
+        node_user_in: iqn.2021-07.com.tsengel:iscsi-target
         node_pass_in: 0tr0s1cret0
   roles:
-    - ricsanfre.iscsi_initiator
+    - tsengel.iscsi_initiator
 ```
 
 License
@@ -96,7 +96,7 @@ MIT
 Author Information
 ------------------
 
-Created by Ricardo Sanchez (ricsanfre)
+Created by Tsengel (tsengel)
 
 
 ## Author Information
