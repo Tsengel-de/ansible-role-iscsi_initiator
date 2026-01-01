@@ -1,0 +1,4 @@
+---
+roles:
+  - storage
+  - iscsi_target
