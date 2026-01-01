@@ -97,3 +97,8 @@ Author Information
 ------------------
 
 Created by Ricardo Sanchez (ricsanfre)
+
+
+## Author Information
+
+Email: tsengel.de@gmail.com
